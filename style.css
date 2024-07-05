@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(135deg, rgb(123, 224, 255), rgb(255, 175, 189));
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    max-width: 90%;
+    margin: 20px;
+    border: 2px solid rgb(128, 250, 189);
+    background: linear-gradient(135deg, rgb(123, 224, 255), rgb(255, 175, 189));
+}
+
+h1 {
+    color: rgb(5, 133, 207);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background: rgb(38, 172, 250);
+    color: white;
+    border: none;
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background: white;
+    color: rgb(0, 98, 255);
+    box-shadow: 0 5px 15px rgb(15, 202, 235);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+.cake {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    height: 300px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 21px;
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    animation: popup-fadein 0.5s ease;
+}
+
+@keyframes popup-fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
